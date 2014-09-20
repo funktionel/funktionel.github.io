@@ -1,0 +1,8 @@
+{
+  "name": "funktionel.github.io",
+  "private": true,
+  "dependencies": {
+    "bourbon": "master",
+    "normalize-scss": "3.0.1"
+  }
+}

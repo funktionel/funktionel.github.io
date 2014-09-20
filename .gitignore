@@ -1,0 +1,5 @@
+*.lock
+.bundle/
+_site/
+vendor/*.md
+vendor/*.json

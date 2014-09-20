@@ -1,0 +1,19 @@
+safe: true
+lsi: false
+
+exclude:
+  - bower.json
+  - Gemfile
+  - Gemfile.lock
+
+permalink: pretty
+highlighter: pygments
+
+gems:
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+sass:
+  sass_dir: vendor/
+  style: :compressed

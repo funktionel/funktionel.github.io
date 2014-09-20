@@ -19,3 +19,5 @@ gems:
 sass:
   sass_dir: vendor/
   style: :compressed
+
+title: "Funktionél"

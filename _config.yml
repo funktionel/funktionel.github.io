@@ -5,6 +5,8 @@ exclude:
   - bower.json
   - Gemfile
   - Gemfile.lock
+  - LICENSE.md
+  - README.md
 
 permalink: pretty
 highlighter: pygments

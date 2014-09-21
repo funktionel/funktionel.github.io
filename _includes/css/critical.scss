@@ -30,6 +30,7 @@
  * Variables...........................Global variables and configuration.
  *
  * TOOLS
+ * Functions...........................Various functions.
  * Animations..........................General CSS3 animations.
  *
  * BASE
@@ -94,6 +95,23 @@ $navbar-nav-link-color: #fff;
 // Footer
 $footer-color: #fff;
 $footer-bg: rgb(25,25,27);
+
+/**
+ * # FUNCTIONS
+ * ------------------------------------------------------------------------- */
+
+@function cdn-asset($path) {
+  $base: "https://cdn.rawgit.com";
+  $repo: "{{ site.github.owner_name }}/{{ site.github.project_title }}";
+  $hash: "{{ site.github.build_revision }}";
+
+  @if ($repo != "" and $hash != "") {
+    @return $base +"/"+ $repo +"/"+ $hash +"/"+ $path;
+  }
+  @else {
+    @return "/"+ $path;
+  }
+}
 
 /**
  * # ANIMATIONS
@@ -347,7 +365,7 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include background-image(radial-gradient(rgba($navbar-bg,.8), $navbar-bg), url("/img/bg.jpg"));
+  @include background-image(radial-gradient(rgba($navbar-bg,.8), $navbar-bg), url(cdn-asset("img/bg.jpg")));
 
   > .container {
     display: table-cell;

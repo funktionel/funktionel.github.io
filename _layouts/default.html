@@ -10,7 +10,12 @@
     </title>
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/site.css">
+
+    <!-- Inline critical CSS -->
+    {% capture include_to_scssify %}
+      {% include css/critical.scss %}
+    {% endcapture %}
+    <style>{{ include_to_scssify | scssify }}</style>
   </head>
   <body>
     {{ content }}

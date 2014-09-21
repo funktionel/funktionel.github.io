@@ -19,7 +19,7 @@ gems:
   - jekyll-sitemap
 
 sass:
-  sass_dir: vendor/
+  sass_dir: _sass/
   style: :compressed
 
 compress_html:

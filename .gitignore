@@ -1,5 +1,5 @@
 *.lock
 .bundle/
 _site/
-vendor/**/*.md
-vendor/**/*.json
+_sass/**/*.md
+_sass/**/*.json

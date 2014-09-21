@@ -79,7 +79,7 @@ $headings-line-height: 1.2;
 $headings-color: #222;
 
 // Grid
-$grid-max-width: 1110px;
+$grid-max-width: 730px;
 $grid-gutter-width: 30px;
 
 // Navbar
@@ -114,28 +114,6 @@ $footer-bg: rgb(25,25,27);
 }
 
 /**
- * # ANIMATIONS
- * ------------------------------------------------------------------------- */
-
-.animated {
-  @include animation-duration(1s);
-  @include animation-fill-mode(both);
-}
-
-@include keyframes(fadeIn) {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  @include animation-name(fadeIn);
-}
-
-/**
  * # DOCUMENT
  * ------------------------------------------------------------------------- */
 
@@ -155,6 +133,7 @@ html {
   position: relative;
   height: 100%;
   font-family: $font-family-base;
+  font-size: $font-size-base;
   line-height: $line-height-ratio;
   color: $text-color;
   background-color: $document-bg;
@@ -223,8 +202,6 @@ h6 { font-size: $font-size-h6; }
 
 p {
   margin: 0 0 ($line-height-base / 2);
-  font-size: $font-size-base;
-  line-height: $line-height-ratio;
 }
 
 /**
@@ -279,10 +256,10 @@ p {
 
 .nav {
   @extend %clearfix;
+}
 
-  a {
-    float: left;
-  }
+.nav a {
+  float: left;
 }
 
 /**
@@ -311,30 +288,28 @@ p {
   &:focus {
     color: $navbar-brand-hover-color;
   }
-
-  svg {
-    display: inline-block;
-    max-height: 100%;
-    padding: 5px 0;
-    vertical-align: top;
-    fill: #fff;
-  }
 }
 
-.navbar-nav {
-  a {
-    padding: 0 ($line-height-base / 2);
-    line-height: $navbar-height;
-    color: $navbar-nav-link-color;
-  }
+.navbar-brand svg {
+  display: inline-block;
+  max-height: 100%;
+  padding: 5px 0;
+  vertical-align: top;
+  fill: #fff;
+}
 
-  &.pull-right:last-child {
-    margin-right: $line-height-base / -2;
-  }
+.navbar-nav a {
+  padding: 0 ($line-height-base / 2);
+  line-height: $navbar-height;
+  color: $navbar-nav-link-color;
+}
 
-  &.pull-left:first-child {
-    margin-left: $line-height-base / -2;
-  }
+.navbar-nav.pull-right:last-child {
+  margin-right: $line-height-base / -2;
+}
+
+.navbar-nav.pull-left:first-child {
+  margin-left: $line-height-base / -2;
 }
 
 /**
@@ -345,10 +320,10 @@ p {
   padding: $line-height-base 0;
   color: $footer-color;
   background-color: $footer-bg;
+}
 
-  p {
-    margin-bottom: 0;
-  }
+.footer p {
+  margin-bottom: 0;
 }
 
 /**
@@ -366,12 +341,12 @@ p {
   background-position: center;
   background-size: cover;
   @include background-image(radial-gradient(rgba($navbar-bg,.8), $navbar-bg), url(cdn-asset("img/bg.jpg")));
+}
 
-  > .container {
-    display: table-cell;
-    margin: 0;
-    vertical-align: middle;
-  }
+.masthead > .container {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
 }
 
 .masthead-title {

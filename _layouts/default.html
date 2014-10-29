@@ -15,10 +15,10 @@ layout: compress
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="/favicon.ico">
 
-    {% capture include_to_scssify %}
+    {% capture scss %}
       {% include css/critical.scss %}
     {% endcapture %}
-    <style>{{ include_to_scssify | scssify }}</style>
+    <style>{{ scss | scssify }}</style>
   </head>
   <body>
     {{ content }}

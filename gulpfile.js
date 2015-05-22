@@ -71,10 +71,21 @@ gulp.task("html:clean", function (done) {
   del(["dist/**/*.html"], done)
 })
 
+gulp.task("copy", function () {
+  return gulp.src([
+    "CNAME"
+  , "favicon.ico"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("dist"))
+})
+
 gulp.task("build", [
   "css"
 , "img"
 , "html"
+, "copy"
 ])
 
 gulp.task("default", ["build"])

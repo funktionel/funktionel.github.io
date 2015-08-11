@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2014 Funktionél.
+ * Copyright (C) 2014-2015 Funktionél.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -81,19 +81,9 @@
   --grid-max-width: 730px;
   --grid-gutter-width: 30px;
 
-  /* Navbar */
-  --navbar-height: 60px;
-  --navbar-bg: rgb(25,25,27);
-
-  --navbar-brand-font-size: 20px;
-  --navbar-brand-color: color(#fff alpha(.75));
-  --navbar-brand-hover-color: #fff;
-
-  --navbar-nav-link-color: #fff;
-
-  /* Footer */
-  --footer-color: #fff;
-  --footer-bg: rgb(25,25,27);
+  /* Masthead */
+  --masthead-bg: #19191b;
+  --masthead-link-color:
 }
 
 /**
@@ -241,78 +231,6 @@ p {
 }
 
 /**
- * # NAVS
- * ------------------------------------------------------------------------- */
-
-.nav:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.nav a {
-  float: left;
-}
-
-/**
- * # NAVBAR
- * ------------------------------------------------------------------------- */
-
-.navbar {
-  position: relative;
-  height: var(--navbar-height);
-  background-color: var(--navbar-bg);
-}
-.nabver > .container {
-  height: inherit;
-}
-
-.navbar-brand {
-  float: left;
-  height: inherit;
-  font-size: var(--navbar-brand-font-size);
-  font-weight: 300;
-  line-height: var(--navbar-height);
-  color: var(--navbar-brand-color);
-}
-.navbar-brand:hover,
-.navbar-brand:focus {
-  color: var(--navbar-brand-hover-color);
-}
-.navbar-brand img {
-  display: inline-block;
-  max-height: 100%;
-  margin: 5px 0;
-  vertical-align: top;
-}
-
-.navbar-nav a {
-  padding: 0 calc(var(--line-height-computed) / 2);
-  line-height: var(--navbar-height);
-  color: var(--navbar-nav-link-color);
-}
-.navbar-nav.pull-right:last-child {
-  margin-right: calc(var(--line-height-computed) / -2);
-}
-.navbar-nav.pull-left:first-child {
-  margin-left: calc(var(--line-height-computed) / -2);
-}
-
-/**
- * # FOOTER
- * ------------------------------------------------------------------------- */
-
-.footer {
-  padding-right: var(--line-height-computed);
-  padding-left: var(--line-height-computed);
-  color: var(--footer-color);
-  background-color: var(--footer-bg);
-}
-.footer p {
-  margin-bottom: 0;
-}
-
-/**
  * # MASTHEAD
  * ------------------------------------------------------------------------- */
 
@@ -320,13 +238,14 @@ p {
   display: table;
   width: 100%;
   height: 100%;
-  margin-top: calc(var(--navbar-height) * -1);
-  margin-bottom: -72px;
-  background-color: var(--navbar-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: radial-gradient(color(var(--navbar-bg) alpha(.8)), var(--navbar-bg)), url("/img/bg.jpg");
+  background-color: var(--masthead-bg);
+}
+.masthead a {
+  color: color(#ccc alpha(.5));
+}
+.masthead a:hover,
+.masthead a:focus {
+  color: color(#ccc alpha(.7));
 }
 .masthead > .container {
   display: table-cell;

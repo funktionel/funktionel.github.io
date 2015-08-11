@@ -1,6 +1,9 @@
 {
   "name": "funktionel.github.io",
   "private": true,
+  "xo": {
+    "space": true
+  },
   "devDependencies": {
     "del": "^1.1.1",
     "ejs": "^2.3.1",
@@ -22,6 +25,7 @@
     "metalsmith": "^1.6.0",
     "metalsmith-in-place": "^1.0.1",
     "metalsmith-layouts": "^1.0.0",
-    "metalsmith-permalinks": "^0.4.0"
+    "metalsmith-permalinks": "^0.4.0",
+    "xo": "^0.5.2"
   }
 }

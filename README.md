@@ -4,4 +4,4 @@
 
 ---
 
-Copyright &copy; 2014 [Funktionél](https://funktionel.co). Licensed under the terms of the [MIT license](LICENSE.md).
+Copyright &copy; 2014-2015 [Funktionél](https://funktionel.co). Licensed under the terms of the [MIT license](LICENSE.md).
